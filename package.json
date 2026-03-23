@@ -1,0 +1,19 @@
+﻿{
+  "name": "mhqviewer",
+  "version": "1.0.0",
+  "description": "Leitor desktop de HQs e Mangás (.pdf, .cbz, .cbr) com Electron",
+  "main": "main.js",
+  "author": "Ruan Queiroz",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "node-unrar-js": "^2.0.2",
+    "pdfjs-dist": "^4.10.38"
+  },
+  "devDependencies": {
+    "electron": "^35.1.5"
+  }
+}
