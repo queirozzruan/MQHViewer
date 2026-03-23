@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MHQViewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <section id="home-screen" class="screen active">
+      <div class="home-overlay"></div>
+      <div class="home-content">
+        <h1 class="home-title">MHQViewer</h1>
+        <p class="home-subtitle">Leitor de HQs e Mangas para .pdf, .cbz e .cbr</p>
+        <button id="open-comic-btn" class="primary-btn giant">
+          <span class="material-symbols-outlined">library_books</span>
+          Abrir Nova HQ
+        </button>
+        <p class="home-hint">Use tambem as setas do teclado para navegar durante a leitura.</p>
+      </div>
+    </section>
+
+    <section id="reader-screen" class="screen">
+      <header class="reader-header">
+        <div class="reader-title-wrap">
+          <p id="reader-series" class="reader-series">-</p>
+          <p id="reader-page-counter" class="reader-counter">Pagina 0 / 0</p>
+        </div>
+        <div class="reader-header-actions">
+          <button id="open-other-btn" class="icon-btn" title="Abrir outra HQ">
+            <span class="material-symbols-outlined">folder_open</span>
+          </button>
+          <button id="back-home-btn" class="icon-btn" title="Voltar para inicio">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="reader-main">
+        <button id="prev-btn" class="nav-btn left" title="Pagina anterior">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <div id="page-stage" class="page-stage">
+          <img id="page-image" alt="Pagina da HQ" />
+          <p id="loading-text" class="loading-text">Abra uma HQ para iniciar.</p>
+        </div>
+
+        <button id="next-btn" class="nav-btn right" title="Proxima pagina">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </main>
+    </section>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
